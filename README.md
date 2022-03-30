@@ -20,3 +20,8 @@ These are the parameters to customize:
 - SMTP_PASS: Password of the SMTP_USER user.
 
 This script uses sshpass, so it must be installed beforehand:  apt-get install sshpass
+
+We run it every 15 minutes with this crontab line
+
+*/15 * * * * /usr/bin/python3 /root/scripts/unifi_error_reboot.py  > /dev/null 2>&1
+
